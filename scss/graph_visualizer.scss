@@ -1,0 +1,42 @@
+.graph-container {
+  .node {
+    text {
+      font-size: 0.9em;
+      transition: font-size ease-in-out 0.2s;
+    }
+    circle {
+      fill: #fff;
+      stroke: #153ba3;
+      stroke-width: 3px;
+      transition: r ease-in-out 0.2s;
+    }
+    &:hover {
+      cursor: pointer;
+      text {
+        font-size: 1em;
+      }
+      circle {
+        r: 12;
+      }
+    }
+  }
+
+  .link {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 2px;
+    &.upsale {
+      stroke: #15a31f;
+    }
+    &.downsale {
+      stroke: #FF0000;
+    }
+  }
+
+  marker.upsale_marker {
+    fill: #15a31f;
+  }
+  marker.downsale_marker {
+    fill: #FF0000;
+  }
+}

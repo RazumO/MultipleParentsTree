@@ -1,0 +1,56 @@
+<html>
+	<head>
+	<link rel="stylesheet" type="text/css" href="css/graph_visualizer.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/css/select2.min.css">
+	</head>
+	<body>
+		<div class="graph-container" style="width: 1000px; height: 700px;">
+		</div>
+
+    //Bootstrap modal window
+		<div class="modal fade funnel-modal" role="dialog" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button aria-hidden="true" class="close" data-dismiss="modal" type="button">
+              <i class="fa fa-times"></i>
+            </button>
+            <h4 class="modal-title">
+              Select product
+            </h4>
+          </div>
+          <div class="modal-body modal-scroll">
+            <div class="form-group">
+              <div class="col-sm-12">
+                <select class="select2 form-control products-select" style="width: 200px;"></select>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-default" data-dismiss="modal" type="button">
+              Back
+            </button>
+            <button class="btn btn-success save-selected-product" type="button">
+              Save changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+		<!--Jquery and d3 is required for this component-->
+		<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js" charset="utf-8"></script>
+		<!-- Bootstrap for modal window-->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<!-- Mustache for setting select tag options in modal window-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+		<!-- Select2 for comfortable work with select-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/js/select2.min.js"></script>
+		<!-- Template to fill select with options for mustache-->
+		<script src="js/templates.js"></script>
+		<!-- Component functionality code-->
+		<script src="js/graph_visualizer.js"></script>
+	</body>
+</html>
